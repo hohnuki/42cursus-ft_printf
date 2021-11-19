@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putbit_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 16:50:43 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/19 21:48:22 by hohnuki          ###   ########.fr       */
+/*   Created: 2021/11/19 21:49:23 by hohnuki           #+#    #+#             */
+/*   Updated: 2021/11/19 22:02:28 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	convert_to_alpha_lower(int nb)
+size_t	ft_strlen(const char *str)
 {
-	if (0 <= nb && nb <= 9)
-		ft_putnbr(nb);
-	else if (10 <= nb && nb <= 15)
-	{
-		nb = nb - 10 + 'a';
-		ft_putnbr(nb);
-	}
-}
+	size_t	i;
 
-void	ft_putbit_lowercase(unsigned long long c)
-{
-	if (c / 16 == 0)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		convert_to_alpha_lower(c % 16);
-		return ;
+		//printf("%c\n", str[i]);
+		i++;
 	}
-	else
-	{
-		ft_putbit_lowercase(c / 16);
-		convert_to_alpha_lower(c % 16);
-	}
+	return (i - 1);
 }
