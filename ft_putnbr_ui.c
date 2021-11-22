@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_ui.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:34:24 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/22 16:28:10 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/23 01:27:11 by ohnukihirok      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static size_t	ft_putnbr_ui_count(unsigned int nb)
 	size_t	i;
 
 	i = 0;
+	if (nb == 0)
+		return (i + 1);
 	while (nb != 0)
 	{
 		i++;

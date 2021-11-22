@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putbit_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:50:43 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/22 20:32:17 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/23 01:45:19 by ohnukihirok      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static size_t	ft_putbit_lowercase_count(unsigned long long c)
 
 	i = 0;
 	if (c == 0)
-		return (1);
+		return (i + 1);
 	while (c != 0)
 	{
 		c /= 16;

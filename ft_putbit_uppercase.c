@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putbit_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:50:45 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/22 20:09:30 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/23 01:41:47 by ohnukihirok      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ static size_t	ft_putbit_uppercase_count(unsigned long long c)
 	size_t	i;
 
 	i = 0;
+	if (c == 0)
+		return (i + 1);
 	while (c != 0)
 	{
 		c /= 16;
