@@ -6,7 +6,7 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:50:45 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/22 16:27:58 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/22 20:09:30 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ size_t	ft_putbit_uppercase(unsigned long long c)
 	if (c / 16 == 0)
 	{
 		convert_to_alpha_upper(c % 16);
-		return (0);
 	}
 	else
 	{
