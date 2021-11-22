@@ -6,13 +6,13 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:10:20 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/19 21:46:47 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/22 15:33:55 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *str)
+size_t	ft_putstr(char *str)
 {
 	size_t	i;
 
@@ -22,4 +22,5 @@ void	ft_putstr(char *str)
 		ft_putchar(str[i]);
 		i++;
 	}
+	return (i);
 }

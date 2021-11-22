@@ -6,18 +6,32 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:50:13 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/19 22:03:54 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/22 15:57:30 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putnbr(int nb)
+static size_t	ft_putnbr_count(int nb)
 {
-	int	num;
+	size_t	i;
+
+	i = 0;
+	while (nb != 0)
+	{
+		i++;
+		nb /= 10;
+	}
+	return (i);
+}
+
+size_t	ft_putnbr(int nb)
+{
+	int		num;
+	size_t	i;
 
 	num = 0;
-	
+	i = ft_putnbr_count(nb);
 	if (nb < 0)
 	{
 		ft_putchar('-');
@@ -37,4 +51,5 @@ void	ft_putnbr(int nb)
 		ft_putchar(nb + '0');
 	if (num == -214748364)
 		ft_putchar(8 + '0');
+	return (i);
 }

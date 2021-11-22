@@ -6,7 +6,7 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 21:49:23 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/19 22:02:28 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/22 15:32:55 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ size_t	ft_strlen(const char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		//printf("%c\n", str[i]);
 		i++;
 	}
 	return (i - 1);
