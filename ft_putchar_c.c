@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putchar_c.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/22 20:12:13 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/23 01:50:51 by ohnukihirok      ###   ########.fr       */
+/*   Created: 2021/11/23 20:35:25 by ohnukihirok       #+#    #+#             */
+/*   Updated: 2021/11/23 20:35:58 by ohnukihirok      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int main(void)
+size_t	ft_putchar_c(int c)
 {
-	ft_printf("%d\n", ft_printf("%X\n", LONG_MAX));
-	printf("%d\n", printf("%X\n", LONG_MAX));
+	write(1, &c, 1);
+	return (1);
 }

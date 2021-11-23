@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+         #
+#    By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/18 16:27:58 by ohnukihirok       #+#    #+#              #
-#    Updated: 2021/11/22 20:16:10 by hohnuki          ###   ########.fr        #
+#    Updated: 2021/11/23 21:28:20 by ohnukihirok      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libftprintf.a
 
 SRCS = ft_isdigit.c ft_printf.c ft_put_address.c ft_putbit_lowercase.c \
 		ft_putbit_uppercase.c ft_putchar.c ft_putnbr_ui.c ft_putnbr.c \
-		ft_putstr.c ft_strlen.c
+		ft_putstr.c ft_strlen.c ft_putchar_c.c
 OBJS = $(SRCS:.c=.o)
 
 CFLAGS = -Wall -Werror -Wextra
