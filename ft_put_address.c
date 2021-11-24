@@ -6,7 +6,7 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 18:34:16 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/22 20:19:16 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/24 14:04:56 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ size_t	ft_put_address(unsigned long long c)
 	if (!c)
 	{
 		ft_putchar('0');
-		return (3);
+		i = 3;
+		return (i);
 	}
 	i = ft_putbit_lowercase(c) + 2;
 	return (i);

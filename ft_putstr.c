@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
+/*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:10:20 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/23 21:11:29 by ohnukihirok      ###   ########.fr       */
+/*   Updated: 2021/11/24 14:06:51 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ size_t	ft_putstr(char *str)
 	i = 0;
 	if (!str)
 	{
+		i = 6;
 		ft_putstr("(null)");
-		return (6);
+		return (i);
 	}
 	while (str[i] != '\0')
 	{

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_c.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
+/*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 20:35:25 by ohnukihirok       #+#    #+#             */
-/*   Updated: 2021/11/23 20:35:58 by ohnukihirok      ###   ########.fr       */
+/*   Updated: 2021/11/24 14:06:01 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 size_t	ft_putchar_c(int c)
 {
+	size_t	i;
+
+	i = 1;
 	write(1, &c, 1);
-	return (1);
+	return (i);
 }
