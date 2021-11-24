@@ -6,7 +6,7 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:08:50 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/24 14:38:52 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/24 23:13:36 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
-# include <stdio.h>
 # include <limits.h>
 
 int		ft_printf(const char *format, ...);
+int		ft_isdigit(int c);
 void	ft_putchar(int c);
 size_t	ft_putnbr(int nb);
 size_t	ft_putstr(char *str);
@@ -27,7 +27,6 @@ size_t	ft_putnbr_ui(unsigned int nb);
 size_t	ft_putbit_lowercase(unsigned long long c);
 size_t	ft_putbit_uppercase(unsigned long long c);
 size_t	ft_put_address(unsigned long long c);
-int		ft_isdigit(int c);
 size_t	ft_putchar_c(int c);
 
 #endif

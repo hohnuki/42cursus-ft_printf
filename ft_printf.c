@@ -6,13 +6,13 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:38:27 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/24 15:32:42 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/24 23:14:49 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	dl(unsigned long long num, char c)
+static size_t	divergence_ui(unsigned int num, char c)
 {
 	size_t	ret;
 
@@ -54,7 +54,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == 'd' || format[i] == 'i' || format[i] == 'c')
 			re += divergence_int(va_arg(args, int), format[i]);
 		else if (format[i] == 'x' || format[i] == 'X' || format[i] == 'u')
-			re += dl((unsigned long long)va_arg(args, unsigned int), format[i]);
+			re += divergence_ui(va_arg(args, unsigned int), format[i]);
 		else if (format[i] == 's')
 			re += ft_putstr(va_arg(args, char *));
 		else if (format[i] == 'p')
