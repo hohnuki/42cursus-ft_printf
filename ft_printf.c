@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
+/*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:38:27 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/23 21:33:09 by ohnukihirok      ###   ########.fr       */
+/*   Updated: 2021/11/24 15:03:03 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	divergence_ui(unsigned int num, char c)
+static size_t	div_ull(unsigned long long num, char c)
 {
 	size_t	ret;
 
@@ -26,7 +26,7 @@ static size_t	divergence_ui(unsigned int num, char c)
 	return (ret);
 }
 
-static size_t	divergence_int(unsigned int num, char c)
+static size_t	div_int(unsigned int num, char c)
 {
 	size_t	ret;
 
@@ -52,9 +52,9 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 			i++;
 		if (format[i] == 'd' || format[i] == 'i' || format[i] == 'c')
-			ret += divergence_int(va_arg(args, int), format[i]);
+			ret += div_int(va_arg(args, int), format[i]);
 		else if (format[i] == 'x' || format[i] == 'X' || format[i] == 'u')
-			ret += divergence_ui(va_arg(args, unsigned int), format[i]);
+			ret += div_ull((unsigned long long)va_arg(args, unsigned int), format[i]);
 		else if (format[i] == 's')
 			ret += ft_putstr(va_arg(args, char *));
 		else if (format[i] == 'p')

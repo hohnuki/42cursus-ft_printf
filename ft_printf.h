@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
+/*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:08:50 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/23 21:28:40 by ohnukihirok      ###   ########.fr       */
+/*   Updated: 2021/11/24 14:38:52 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ size_t	ft_putbit_lowercase(unsigned long long c);
 size_t	ft_putbit_uppercase(unsigned long long c);
 size_t	ft_put_address(unsigned long long c);
 int		ft_isdigit(int c);
-size_t	ft_strlen(const char *str);
 size_t	ft_putchar_c(int c);
 
 #endif
