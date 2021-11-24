@@ -6,13 +6,13 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:38:27 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/24 15:03:03 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/24 15:32:42 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static size_t	div_ull(unsigned long long num, char c)
+static size_t	dl(unsigned long long num, char c)
 {
 	size_t	ret;
 
@@ -26,7 +26,7 @@ static size_t	div_ull(unsigned long long num, char c)
 	return (ret);
 }
 
-static size_t	div_int(unsigned int num, char c)
+static size_t	divergence_int(unsigned int num, char c)
 {
 	size_t	ret;
 
@@ -42,27 +42,27 @@ int	ft_printf(const char *format, ...)
 {
 	va_list	args;
 	size_t	i;
-	size_t	ret;
+	size_t	re;
 
 	i = 0;
-	ret = 0;
+	re = 0;
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 			i++;
 		if (format[i] == 'd' || format[i] == 'i' || format[i] == 'c')
-			ret += div_int(va_arg(args, int), format[i]);
+			re += divergence_int(va_arg(args, int), format[i]);
 		else if (format[i] == 'x' || format[i] == 'X' || format[i] == 'u')
-			ret += div_ull((unsigned long long)va_arg(args, unsigned int), format[i]);
+			re += dl((unsigned long long)va_arg(args, unsigned int), format[i]);
 		else if (format[i] == 's')
-			ret += ft_putstr(va_arg(args, char *));
+			re += ft_putstr(va_arg(args, char *));
 		else if (format[i] == 'p')
-			ret += ft_put_address(va_arg(args, unsigned long long));
+			re += ft_put_address(va_arg(args, unsigned long long));
 		else
-			ret += ft_putchar_c(format[i]);
+			re += ft_putchar_c(format[i]);
 		i++;
 	}
 	va_end(args);
-	return ((int)ret);
+	return ((int)re);
 }
