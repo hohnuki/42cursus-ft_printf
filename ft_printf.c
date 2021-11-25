@@ -6,7 +6,7 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:38:27 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/24 23:14:49 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/25 13:33:41 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static size_t	divergence_ui(unsigned int num, char c)
 	return (ret);
 }
 
-static size_t	divergence_int(unsigned int num, char c)
+static size_t	divergence_int(int num, char c)
 {
 	size_t	ret;
 
