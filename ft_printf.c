@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:38:27 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/25 17:31:54 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/26 16:03:01 by ohnukihirok      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static size_t	divergence_int(int num, char c)
 	return (ret);
 }
 
-static size_t	parse_conversion(const char *format, int i, va_list *args)
+static size_t	parse_conversion(const char *format, size_t i, va_list *args)
 {
 	size_t	ret;
 
