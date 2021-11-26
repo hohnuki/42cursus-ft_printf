@@ -6,7 +6,7 @@
 /*   By: ohnukihiroki <ohnukihiroki@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 22:38:27 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/26 16:03:01 by ohnukihirok      ###   ########.fr       */
+/*   Updated: 2021/11/26 16:16:46 by ohnukihirok      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,21 @@ static size_t	divergence_int(int num, char c)
 	return (ret);
 }
 
-static size_t	parse_conversion(const char *format, size_t i, va_list *args)
+static size_t	parse_conversion(va_list *args, char c)
 {
 	size_t	ret;
 
 	ret = 0;
-	if (format[i] == 'd' || format[i] == 'i' || format[i] == 'c')
-		ret += divergence_int(va_arg(*args, int), format[i]);
-	else if (format[i] == 'x' || format[i] == 'X' || format[i] == 'u')
-		ret += divergence_ui(va_arg(*args, unsigned int), format[i]);
-	else if (format[i] == 's')
+	if (c == 'd' || c == 'i' || c == 'c')
+		ret += divergence_int(va_arg(*args, int), c);
+	else if (c == 'x' || c == 'X' || c == 'u')
+		ret += divergence_ui(va_arg(*args, unsigned int), c);
+	else if (c == 's')
 		ret += ft_putstr(va_arg(*args, char *));
-	else if (format[i] == 'p')
+	else if (c == 'p')
 		ret += ft_put_address(va_arg(*args, unsigned long long));
 	else
-		ret += ft_putchar_c(format[i]);
+		ret += ft_putchar_c(c);
 	return (ret);
 }
 
@@ -72,7 +72,7 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			ret += parse_conversion(format, i, &args);
+			ret += parse_conversion(&args, format[i]);
 		}
 		else
 			ret += ft_putchar_c(format[i]);
