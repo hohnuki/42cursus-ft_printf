@@ -6,7 +6,7 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 16:50:45 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/24 23:14:09 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/29 23:10:42 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,9 @@ static size_t	ft_putbit_uppercase_count(unsigned long long c)
 	return (i);
 }
 
-static void	convert_to_alpha_upper(int nb)
+static void	convert_to_alpha_upper(size_t nb)
 {
-	if (0 <= nb && nb <= 9)
-		ft_putchar(nb + '0');
-	else if (10 <= nb && nb <= 15)
-	{
-		nb = nb - 10 + 'A';
-		ft_putchar(nb);
-	}
+	ft_putchar("0123456789ABCDEF"[nb]);
 }
 
 size_t	ft_putbit_uppercase(unsigned long long c)
