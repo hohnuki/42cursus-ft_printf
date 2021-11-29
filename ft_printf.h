@@ -6,7 +6,7 @@
 /*   By: hohnuki <hohnuki@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:08:50 by hohnuki           #+#    #+#             */
-/*   Updated: 2021/11/24 23:13:36 by hohnuki          ###   ########.fr       */
+/*   Updated: 2021/11/29 15:02:28 by hohnuki          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 # include <limits.h>
 
 int		ft_printf(const char *format, ...);
-int		ft_isdigit(int c);
 void	ft_putchar(int c);
 size_t	ft_putnbr(int nb);
 size_t	ft_putstr(char *str);
