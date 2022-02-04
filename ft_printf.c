@@ -18,7 +18,7 @@ static size_t	divergence_ui(unsigned int num, char c)
 
 	ret = 0;
 	if (c == 'x')
-		ret += ft_putbit_lowercase(num);
+		ret += ft_putbit_lowercase(num);//ok
 	else if (c == 'X')
 		ret += ft_putbit_uppercase(num);
 	else if (c == 'u')
