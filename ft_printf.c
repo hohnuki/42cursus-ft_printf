@@ -56,7 +56,7 @@ static size_t	parse_conversion(va_list *args, char c)
 	return (ret);
 }
 
-int	ft_printf(const char *format, ...)
+int	ft_printf(const char *format, ...)//test
 {
 	va_list	args;
 	size_t	i;
